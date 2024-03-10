@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Colemak Chrome Extension",
+  "description": "Allows you to type in Colemak if downloading software isn't administravitely allowed.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "keyboard.html",
+    "default_icon": "images/colemak_layout.png"
+  }
+}
