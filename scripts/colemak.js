@@ -1,6 +1,22 @@
-window.addEventListener("keydown",
+function selectButton() {
+  window.addEventListener("mouseup", 
   (event) => {
-    // figure out logic for turning current keyboard press into whatever it is in colemak
-    event.code
+    const selectedText = window.getSelection();
+    const stringSelectedText = selectedText.toString();
+
+    if(stringSelectedText == "") {
+      return;
+    }
+
+    // 1. make HTML appear at mouse coordinates
+    //      - make html doc
+    //      - use MouseEvent.x / MouseEvent.y or something
+    // 2. find the element that the selected text is under
+
+
+
   }, true
-)
+  )
+}
+
+selectButton();
