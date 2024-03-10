@@ -1,22 +1,28 @@
-function selectButton() {
-  window.addEventListener("mouseup", 
+var textInput;
+
+window.addEventListener("mousedown", 
   (event) => {
-    const selectedText = window.getSelection();
-    const stringSelectedText = selectedText.toString();
+    window.addEventListener("mousemove", mousemoveListener, {passive: true});
+  }
+);
 
-    if(stringSelectedText == "") {
-      return;
-    }
-
-    // 1. make HTML appear at mouse coordinates
-    //      - make html doc
-    //      - use MouseEvent.x / MouseEvent.y or something
-    // 2. find the element that the selected text is under
-
-
-
-  }, true
-  )
+function mousemoveListener(event) {
+  textInput = document.elementFromPoint(event.clientX, event.clientY);
 }
 
-selectButton();
+
+
+window.addEventListener("mouseup", 
+  (event) => {
+  const selectedText = window.getSelection();
+  const stringSelectedText = selectedText.toString();
+
+  if(stringSelectedText == "") {
+    return;
+  }
+
+  // 1. make a keymap, see if a seperate json file would work or just a dictionary
+  // 2. insert that into textInput
+
+  }, true
+)
